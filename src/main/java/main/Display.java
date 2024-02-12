@@ -3,11 +3,7 @@ package main;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -197,6 +193,21 @@ public class Display {
 
         playback.addActionListener(e -> togglePlaying());
         mute.addActionListener(e -> toggleMute());
+        next.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                playlistMaker.skip();
+                loadVideo(playlistMaker.getCurrent());
+            }
+        });
+        previous.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                playlistMaker.previous();
+                loadVideo(playlistMaker.getCurrent());
+            }
+        });
+
 
         window.add(pane, BorderLayout.SOUTH);
 
