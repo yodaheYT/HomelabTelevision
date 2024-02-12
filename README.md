@@ -1,5 +1,8 @@
 # Homelab Television (HLTV)
 ## A simple tool made in Java using VLCJ to randomly play files in a directory
+
+## Note Skip Button is currently broken and on Linux Path names cannot have spaces (if used from the command line)
+
 ![Github Total Downloads](https://img.shields.io/github/downloads/yodaheYT/HomelabTelevision/total?style=for-the-badge&logo=github)
 ![GitHub last commit](https://img.shields.io/github/last-commit/yodaheYT/HomelabTelevision?style=for-the-badge)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/yodaheYT/HomelabTelevision?style=for-the-badge)
