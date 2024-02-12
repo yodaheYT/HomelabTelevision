@@ -54,16 +54,38 @@ public class Display {
             playback.setSelected(true);
         }
     }
-    public void changeVol(Boolean upDown) {
-        if (upDown) {
+    public void changeVol(int upDown) {
+        if (upDown == -1) {
             if (volume+5 <= 150) {
                 volume += 5;
             }
-        } else {
+        } else if (upDown == 1) {
             if (volume-5 >= 0) {
                 volume -= 5;
             }
+        } else if (upDown == 0) {
+            if (muted) {
+                empc.mediaPlayer().audio().setVolume(0);
+            }
         }
+
+        if (!muted == mute.isSelected()) {
+            mute.setSelected(muted);
+        }
+
+        Marquee marquee = Marquee.marquee()
+                .text(Integer.toString(volume))
+                .size(40)
+                .colour(Color.WHITE)
+                .timeout(500)
+                .position(MarqueePosition.TOP_RIGHT)
+                .opacity(0.8f)
+                .enable();
+        empc.mediaPlayer().marquee().set(marquee);
+    }
+    public void toggleMute() {
+        muted = !muted;
+        changeVol(0);
     }
 
     public void toggleFullScreen() {
@@ -112,20 +134,11 @@ public class Display {
                     muted = false;
                 }
                 if (e.getWheelRotation() == 1) {
-                    changeVol(false);
+                    changeVol(1);
                 } else if (e.getWheelRotation() == -1) {
-                    changeVol(true);
+                    changeVol(-1);
                 }
                 empc.mediaPlayer().audio().setVolume(volume);
-                Marquee marquee = Marquee.marquee()
-                        .text(Integer.toString(volume))
-                        .size(40)
-                        .colour(Color.WHITE)
-                        .timeout(500)
-                        .position(MarqueePosition.TOP_RIGHT)
-                        .opacity(0.8f)
-                        .enable();
-                empc.mediaPlayer().marquee().set(marquee);
             }
 
             // Keybinds
@@ -143,9 +156,11 @@ public class Display {
                     playlistMaker.previous();
                     loadVideo(playlistMaker.getCurrent());
                 } else if (e.getKeyCode() == 38) {
-                    changeVol(true);
+                    changeVol(-1);
                 } else if (e.getKeyCode() == 40) {
-                    changeVol(false);
+                    changeVol(1);
+                } else if (e.getKeyCode() == 77) {
+                    toggleMute();
                 }
             }
 
@@ -181,6 +196,7 @@ public class Display {
         pane.setPreferredSize(new Dimension(1280, 48));
 
         playback.addActionListener(e -> togglePlaying());
+        mute.addActionListener(e -> toggleMute());
 
         window.add(pane, BorderLayout.SOUTH);
 
