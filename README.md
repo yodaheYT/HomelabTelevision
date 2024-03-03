@@ -9,7 +9,7 @@
 
 ![GitHub forks](https://img.shields.io/github/forks/yodaheYT/HomelabTelevision?style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/yodaheYT/HomelabTelevision?style=for-the-badge)
-![GitHub Release](https://img.shields.io/github/v/release/yodaheYT/HomelabTelevision?sort=date&style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/yodaheYT/HomelabTelevision?display_name=release&style=for-the-badge)
 
 
 
