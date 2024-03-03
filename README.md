@@ -13,10 +13,10 @@
 
 
 
-| Release | Link                                                                                  | Status                                                                                                                                                                                                             |
-|---------|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Stable  | [GitHub Releases](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Stable)  | [![GitHub Stable Releases](https://img.shields.io/github/downloads/yodaheYT/HomelabTelevision/Stable/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Stable)    |
-| Testing | [GitHub Releases](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Testing) | [![GitHub Testing Releases](https://img.shields.io/github/downloads/yodaheYT/HomelabTelevision/Testing/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Testing) |
+| Release | Link                                                                               | Status                                                                                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Stable  | [GitHub Releases](https://github.com/yodaheYT/HomelabTelevision/releases/tag/V0.2) | [![GitHub Releases](https://img.shields.io/github/downloads/yodaheYT/HomelabTelevision/V0.2/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Stable)          |
+| Testing | [GitHub Releases](https://github.com/yodaheYT/HomelabTelevision/releases/tag/V0.3) | [![GitHub Testing Releases](https://img.shields.io/github/downloads/yodaheYT/HomelabTelevision/V0.3/total?style=for-the-badge&logo=github)](https://github.com/yodaheYT/HomelabTelevision/releases/tag/Testing) |
 
 # What is HLTV?
 Homelab Television is a Java app that takes in a path, then randomizes the order, and plays them in order.
