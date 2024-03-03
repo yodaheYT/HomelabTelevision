@@ -1,15 +1,19 @@
 package main;
 
 public class Main {
-    public static String DefaultPath = "";
+
+    static ConfigReader configReader = new ConfigReader();
     public static DirectoryPlaylistMaker playlistMaker = new DirectoryPlaylistMaker();
     public static void main(String[] args) {
+        Config cfg = configReader.parseConfig();
         if (args.length > 0) {
             playlistMaker.loadDir(args[0]);
         } else {
-            playlistMaker.loadDir(DefaultPath);
+            playlistMaker.loadDir(cfg.dirToParse);
         }
-        playlistMaker.randomize();
+        if (cfg.randomize) {
+            playlistMaker.randomize();
+        }
 
         Display display = new Display(playlistMaker);
         display.init();
