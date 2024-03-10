@@ -11,6 +11,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/yodaheYT/HomelabTelevision?style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/yodaheYT/HomelabTelevision?display_name=release&style=for-the-badge)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/yodaheyt/homelabtelevision/badge)](https://www.codefactor.io/repository/github/yodaheyt/homelabtelevision)
 
 
 | Release | Link                                                                               | Status                                                                                                                                                                                                          |
